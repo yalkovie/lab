@@ -126,3 +126,54 @@ int main()
 	return 0;
 }
 ```
+```
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>
+#include <math.h>
+
+int main() {
+
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+
+	int k1, i1 = 0;
+	int x2, i2 = 1;
+	int k3, m3;
+	int m4, i4 = 0; unsigned long long num4 = 1;
+
+	//=====================//
+
+	printf("введите положительное число больше 0: ");
+	scanf("%d", &k1);
+
+	for (i1 = 1; i1 < k1+1; i1++) {
+		if (k1 % i1 == 0) {
+			printf("%d делится на %d\n", k1, i1);
+		}
+	}
+
+	//=====================//
+
+	printf("\nвведите число: "); scanf("%d", &x2);
+	printf("ответа пока нет\n");
+
+	//=====================//
+
+	printf("\nвведите основание: \n"); scanf("%d", &m3);
+	printf("введите степень: \n"); scanf("%d", &k3);
+	printf("%d в степени %d = %d\n", m3, k3, (int)pow(m3, k3));
+
+	//=====================//
+
+	printf("\nвведите число: ");
+	scanf("%d", &m4);
+	for (i4 = m4; i4 > 1; i4 -= 2) {
+		num4 *= i4;
+	}
+	printf("%d!! = %llu", m4, num4);
+
+	return 0;
+}
+```
