@@ -142,6 +142,7 @@ int main() {
 	int x2, i2 = 1;
 	int k3, m3;
 	int m4, i4 = 0; unsigned long long num4 = 1;
+	int x6 = 0, n6 = 1;
 
 	//=====================//
 
@@ -172,7 +173,15 @@ int main() {
 	for (i4 = m4; i4 > 1; i4 -= 2) {
 		num4 *= i4;
 	}
-	printf("%d!! = %llu", m4, num4);
+	printf("%d!! = %llu\n", m4, num4);
+
+	//=====================//
+
+	printf("введите число: "); scanf("%d", &x6);
+	while (n6 < x6) {
+		n6 *= 2;
+	}
+	printf("%d", n6);
 
 	return 0;
 }
